@@ -78,6 +78,15 @@ namespace Banking22.Banking
             // Example: Is the account number even valid
         }
 
+        public double GetAccountBalance(string accountNumber)
+        {
+            if (accounts.ContainsKey(accountNumber))
+            {
+                return accounts[accountNumber].Balance;
+            }
+
+            throw new ArgumentException($"Unknown account number '{accountNumber}'");
+        }
     }
 }
 
