@@ -25,6 +25,10 @@ namespace Banking22.Banking.Account
             }
         }
 
+        // TODO: Extract account number generation into a separate
+        // class or let individual account types internally define
+        // how they generate account numbers
+        // Not too bad to leave this here for now
         private string GenerateAccountNumber()
         {
             return $"{new Random().NextInt64()}-{DateTime.Now.Year}";
