@@ -32,7 +32,7 @@ namespace Banking22.Banking
             ValidateDepositInputs(accountNumber, amount);
 
             var account = accounts[accountNumber];
-            var deposit = new DepositTransaction(amount, account);
+            var deposit = new Deposit(amount, account);
             deposit.Process();
         }
 
@@ -49,7 +49,7 @@ namespace Banking22.Banking
             ValidateWithdrawalInputs(accountNumber, amount);
 
             var account = accounts[accountNumber];
-            var withdrawal = new WithdrawalTransaction(amount, account);
+            var withdrawal = new Withdrawal(amount, account);
             withdrawal.Process();
         }
 
@@ -68,7 +68,7 @@ namespace Banking22.Banking
             var fromAccount = accounts[senderAccountNumber];
             var recipientAccount = accounts[recipientAccountNumber];
 
-            var transfer = new TransferTransaction(amount, fromAccount, recipientAccount);
+            var transfer = new Transfer(amount, fromAccount, recipientAccount);
             transfer.Process();
         }
 

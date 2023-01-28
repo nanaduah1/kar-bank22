@@ -15,7 +15,7 @@ namespace Bank22.Tests
             var account = new IndividualAccount(
                 "12345", new IndividualOwner("Customer12"), 1000d);
 
-            var withDrawal = new WithdrawalTransaction(500d, account);
+            var withDrawal = new Withdrawal(500d, account);
            withDrawal.Process();
 
             const double expectedBalance = 500d;
@@ -30,7 +30,7 @@ namespace Bank22.Tests
             var account = new IndividualAccount(
                 "12345", new IndividualOwner("Customer33"), 1000d);
 
-            var withDrawal = new WithdrawalTransaction(500.01d, account);
+            var withDrawal = new Withdrawal(500.01d, account);
 
             Assert.ThrowsException<WithdrawalLimitExceededException>(
                () => withDrawal.Process());

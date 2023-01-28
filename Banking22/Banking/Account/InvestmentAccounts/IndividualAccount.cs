@@ -12,16 +12,16 @@ namespace Banking22.Banking.Account.InvestmentAccounts
         {
         }
 
-        public override void Debit(Transaction.Transaction deposit)
+        public override void Debit(Transaction.Transaction debit)
         {
-            ValidateTransaction(deposit);
-            base.Debit(deposit);
+            ValidateTransaction(debit);
+            base.Debit(debit);
         }
 
-        private void ValidateTransaction(Transaction.Transaction deposit)
+        private void ValidateTransaction(Transaction.Transaction debit)
         {
             const double withdrawalLimit = 500d;
-            if (withdrawalLimit < deposit.Amount)
+            if (withdrawalLimit < debit.Amount)
             {
                 throw new WithdrawalLimitExceededException(withdrawalLimit);
             }

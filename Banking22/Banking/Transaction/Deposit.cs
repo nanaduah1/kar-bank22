@@ -1,11 +1,11 @@
 ﻿
 namespace Banking22.Banking.Transaction
 {
-    public class DepositTransaction : Transaction
+    public class Deposit : Transaction
     {
         private readonly Account.Account account;
 
-        public DepositTransaction(double amount, Account.Account account) : base(amount)
+        public Deposit(double amount, Account.Account account) : base(amount)
         {
             this.account = account;
         }

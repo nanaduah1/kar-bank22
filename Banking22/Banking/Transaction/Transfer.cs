@@ -1,11 +1,11 @@
 ﻿namespace Banking22.Banking.Transaction
 {
-    public class TransferTransaction : Transaction
+    public class Transfer : Transaction
     {
         private readonly Account.Account fromAccount;
         private readonly Account.Account toAccount;
 
-        public TransferTransaction(double amount, Account.Account fromAccount,
+        public Transfer(double amount, Account.Account fromAccount,
             Account.Account toAccount)
             : base(amount)
         {
