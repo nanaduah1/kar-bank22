@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Banking\" />
+    <None Remove="Banking\Account\" />
+    <None Remove="Banking\Transaction\" />
+    <None Remove="Banking\Account\InvestmentAccounts\" />
+    <None Remove="Banking\Ownership\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Banking\" />
+    <Folder Include="Banking\Account\" />
+    <Folder Include="Banking\Transaction\" />
+    <Folder Include="Banking\Account\InvestmentAccounts\" />
+    <Folder Include="Banking\Ownership\" />
+  </ItemGroup>
+</Project>
